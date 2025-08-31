@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
       <h1>Nested Components in React</h1>
+      <h2>There are {books.length} books.</h2>
       <div className="books">
         {books.map((b) => (
           <React.Fragment key={b.id}>

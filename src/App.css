@@ -13,10 +13,11 @@ body {
 
   h1 {
     color: yellowgreen;
+    margin-bottom: 1rem;
   }
 
   .book {
-    margin: 1rem;
+    margin: 1rem 0;
     padding: 1rem;
     background-color: #484141;
   }
