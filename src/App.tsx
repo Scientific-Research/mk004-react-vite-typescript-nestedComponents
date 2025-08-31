@@ -11,6 +11,9 @@ function App() {
         {books.map((b) => (
           <React.Fragment key={b.id}>
             <div className="book">
+              <a href={b.bookUrl} target="_blank">
+                <img className="cover" src={b.imageUrl} alt="" />
+              </a>
               <p className="title">
                 <span className="title">Title:</span> {b.title}
               </p>

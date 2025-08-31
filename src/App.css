@@ -40,4 +40,8 @@ body {
   span.author {
     color: green;
   }
+
+  img {
+    margin: 0.5rem;
+  }
 }
