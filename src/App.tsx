@@ -14,12 +14,16 @@ function App() {
               <a href={b.bookUrl} target="_blank">
                 <img className="cover" src={b.imageUrl} alt="" />
               </a>
-              <p className="title">
-                <span className="title">Title:</span> {b.title}
-              </p>
-              <p className="author">
-                <span className="author">Author:</span> {b.author}
-              </p>
+              <div className="allThreeBooks">
+                <a href={b.bookUrl} target="_blank">
+                  <p className="title">
+                    <span className="title">Title:</span> {b.title}
+                  </p>
+                </a>
+                <p className="author">
+                  <span className="author">Author:</span> {b.author}
+                </p>
+              </div>
             </div>
           </React.Fragment>
         ))}

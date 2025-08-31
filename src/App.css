@@ -17,9 +17,24 @@ body {
   }
 
   .book {
+    display: flex;
     margin: 1rem 0;
     padding: 1rem;
     background-color: #484141;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .allThreeBooks {
+    margin-top: 1rem;
+    font-weight: bold;
   }
 
   .title {
@@ -38,10 +53,16 @@ body {
   }
 
   span.author {
-    color: green;
+    color: rgb(146, 151, 182);
   }
 
   img {
     margin: 0.5rem;
+    box-shadow: 3px 2px 7px -4px #000;
+  }
+
+  .cover {
+    min-width: 100px;
+    max-width: 100px;
   }
 }
