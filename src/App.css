@@ -14,4 +14,29 @@ body {
   h1 {
     color: yellowgreen;
   }
+
+  .book {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #484141;
+  }
+
+  .title {
+    color: red;
+    font-size: large;
+    margin-bottom: 0.5rem;
+  }
+
+  .author {
+    color: aqua;
+    font-size: medium;
+  }
+
+  span.title {
+    color: bisque;
+  }
+
+  span.author {
+    color: green;
+  }
 }
