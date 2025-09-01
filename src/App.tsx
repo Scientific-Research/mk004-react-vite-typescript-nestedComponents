@@ -1,9 +1,20 @@
 import { useState } from 'react';
 import './App.css';
-import books from './data/books.json';
+import rawBooks from './data/books.json';
 import { Books } from './components/books';
+import { IBook } from './interfaces';
 
 // const bookNumber = 837465;
+
+const books: IBook[] = [];
+rawBooks.forEach((rawBook) => {
+  const book: IBook = {
+    ...rawBook,
+    isLiked: false,
+  };
+  books.push(book);
+});
+console.log(books);
 
 function App() {
   const [toggleImages, setToggleImages] = useState(true);
