@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { IBook } from '../interfaces';
 
 interface Iprops {
@@ -7,6 +8,12 @@ interface Iprops {
 }
 
 export const Book = ({ book: b, toggleImages }: Iprops) => {
+  const [toggleLike, setToggleLike] = useState(false);
+
+  const handleToggleLike = () => {
+    setToggleLike(!toggleLike);
+  };
+
   return (
     <div className="book">
       <a href={b.bookUrl} target="_blank">
@@ -24,8 +31,11 @@ export const Book = ({ book: b, toggleImages }: Iprops) => {
         <p className="author">
           <span className="author">Author:</span> {b.author}
         </p>
-        <p className="isLiked">{b.isLiked ? 'LIKED' : 'Not Liked'}</p>
-        <button className="btnToggleLike">toggle like</button>
+        {/* <p className="isLiked">{b.isLiked ? 'LIKED' : 'Not Liked'}</p> */}
+        <p className="isLiked">{toggleLike ? 'LIKED' : 'Not Liked'}</p>
+        <button onClick={handleToggleLike} className="btnToggleLike">
+          toggle like
+        </button>
       </div>
     </div>
   );
