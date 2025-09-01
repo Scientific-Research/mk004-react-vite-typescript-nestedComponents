@@ -10,7 +10,7 @@ const books: IBook[] = [];
 rawBooks.forEach((rawBook) => {
   const book: IBook = {
     ...rawBook,
-    isLiked: false,
+    isLiked: true,
   };
   books.push(book);
 });
