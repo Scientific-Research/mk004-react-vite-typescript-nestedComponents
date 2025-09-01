@@ -1,12 +1,4 @@
-// import { Iprops } from '../components/books';
-
-interface IBook {
-  id: number;
-  title: string;
-  author: string;
-  bookUrl: string;
-  imageUrl: string;
-}
+import { IBook } from '../interfaces';
 
 interface Iprops {
   book: IBook;
@@ -14,7 +6,6 @@ interface Iprops {
 }
 
 export const Book = ({ book: b }: Iprops) => {
-  // export const Book: React.FC<IBook> = ({ book: b }) => {
   return (
     <div className="book">
       <a href={b.bookUrl} target="_blank">

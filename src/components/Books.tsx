@@ -1,12 +1,5 @@
 import { Book } from './Book';
-
-export interface IBook {
-  id: number;
-  title: string;
-  author: string;
-  bookUrl: string;
-  imageUrl: string;
-}
+import { IBook } from '../interfaces';
 
 export interface Iprops {
   books: IBook[];
