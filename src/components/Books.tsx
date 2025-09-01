@@ -29,7 +29,7 @@ export const Books = ({ books }: Iprops) => {
       {/* <h3>{bookNumber}</h3> */}
 
       {books.map((book: IBook) => (
-        <Book book={book} key={book.id} />
+        <Book book={book} key={book.id} toggleImages={toggleImages} />
       ))}
     </>
   );

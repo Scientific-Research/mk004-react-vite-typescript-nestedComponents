@@ -1,17 +1,17 @@
-import { useState } from 'react';
 import { IBook } from '../interfaces';
 
 interface Iprops {
   book: IBook;
+  toggleImages: boolean;
   // bookNumber: number;
 }
 
-export const Book = ({ book: b }: Iprops) => {
+export const Book = ({ book: b, toggleImages }: Iprops) => {
   return (
     <div className="book">
       <a href={b.bookUrl} target="_blank">
         {/* <img className="cover" src={b.imageUrl} alt="" /> */}
-        {<img className="cover" src={b.imageUrl} alt="" />}
+        {toggleImages && <img className="cover" src={b.imageUrl} alt="" />}
       </a>
       <div className="allThreeBooks">
         <a href={b.bookUrl} target="_blank">
