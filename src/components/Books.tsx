@@ -10,14 +10,17 @@ interface IBook {
 
 interface Iprops {
   books: IBook[];
+  bookNumber: number;
 }
 
 // export const Books: React.FC<BooksProps> = ({ books }) => { OR
 // export const Books = ({ books }: BooksProps) => { OR
-export const Books = ({ books }: Iprops) => {
+export const Books = ({ books, bookNumber }: Iprops) => {
   return (
     <>
       <h2>There are {books.length} books.</h2>
+      <h3>{bookNumber}</h3>
+
       <div className="books">
         {books.map((b: IBook) => (
           <React.Fragment key={b.id}>
