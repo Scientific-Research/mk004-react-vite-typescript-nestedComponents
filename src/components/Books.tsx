@@ -1,6 +1,6 @@
-import React from 'react';
+import { Book } from './Book';
 
-interface IBook {
+export interface IBook {
   id: number;
   title: string;
   author: string;
@@ -8,40 +8,23 @@ interface IBook {
   imageUrl: string;
 }
 
-interface Iprops {
+export interface Iprops {
   books: IBook[];
-  bookNumber: number;
+  // bookNumber: number;
 }
 
 // export const Books: React.FC<BooksProps> = ({ books }) => { OR
 // export const Books = ({ books }: BooksProps) => { OR
-export const Books = ({ books, bookNumber }: Iprops) => {
+// export const Books = ({ books, bookNumber }: Iprops) => {
+export const Books = ({ books }: Iprops) => {
   return (
     <>
       <h2>There are {books.length} books.</h2>
-      <h3>{bookNumber}</h3>
+      {/* <h3>{bookNumber}</h3> */}
 
-      <div className="books">
-        {books.map((b: IBook) => (
-          <React.Fragment key={b.id}>
-            <div className="book">
-              <a href={b.bookUrl} target="_blank">
-                <img className="cover" src={b.imageUrl} alt="" />
-              </a>
-              <div className="allThreeBooks">
-                <a href={b.bookUrl} target="_blank">
-                  <p className="title">
-                    <span className="title">Title:</span> {b.title}
-                  </p>
-                </a>
-                <p className="author">
-                  <span className="author">Author:</span> {b.author}
-                </p>
-              </div>
-            </div>
-          </React.Fragment>
-        ))}
-      </div>
+      {books.map((book: IBook) => (
+        <Book book={book} key={book.id} />
+      ))}
     </>
   );
 };
