@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface Ibooks {
+interface IBook {
   id: number;
   title: string;
   author: string;
@@ -8,17 +8,18 @@ interface Ibooks {
   imageUrl: string;
 }
 
-interface BooksProps {
-  books: Ibooks[];
+interface Iprops {
+  books: IBook[];
 }
 
 // export const Books: React.FC<BooksProps> = ({ books }) => { OR
-export const Books = ({ books }: BooksProps) => {
+// export const Books = ({ books }: BooksProps) => { OR
+export const Books = ({ books }: Iprops) => {
   return (
     <>
       <h2>There are {books.length} books.</h2>
       <div className="books">
-        {books.map((b) => (
+        {books.map((b: IBook) => (
           <React.Fragment key={b.id}>
             <div className="book">
               <a href={b.bookUrl} target="_blank">
