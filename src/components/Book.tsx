@@ -13,12 +13,14 @@ export const Book = ({ book: b, toggleImages }: Iprops) => {
         {/* <img className="cover" src={b.imageUrl} alt="" /> */}
         {toggleImages && <img className="cover" src={b.imageUrl} alt="" />}
       </a>
+
       <div className="allThreeBooks">
         <a href={b.bookUrl} target="_blank">
           <p className="title">
             <span className="title">Title:</span> {b.title}
           </p>
         </a>
+
         <p className="author">
           <span className="author">Author:</span> {b.author}
         </p>
