@@ -12,11 +12,15 @@ function App() {
     console.log('Toggle Images');
     // setToggleImages(true);
 
-    if (toggleImages === false) {
-      setToggleImages(true);
-    } else {
-      setToggleImages(false);
-    }
+    // First Solution for Toggling:
+    // if (toggleImages === false) {
+    //   setToggleImages(true);
+    // } else {
+    //   setToggleImages(false);
+    // }
+
+    // Second Solution for Toggling:
+    setToggleImages(!toggleImages);
   };
 
   return (
