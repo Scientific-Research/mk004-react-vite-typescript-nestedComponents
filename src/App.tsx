@@ -7,8 +7,6 @@ import { Books } from './components/books';
 function App() {
   return (
     <div className="App">
-      <h1>Nested Components in React</h1>
-      {/* <Books books={books} bookNumber={bookNumber} /> */}
       <Books books={books} />
     </div>
   );

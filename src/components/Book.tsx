@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { IBook } from '../interfaces';
 
 interface Iprops {
@@ -9,7 +10,8 @@ export const Book = ({ book: b }: Iprops) => {
   return (
     <div className="book">
       <a href={b.bookUrl} target="_blank">
-        <img className="cover" src={b.imageUrl} alt="" />
+        {/* <img className="cover" src={b.imageUrl} alt="" /> */}
+        {<img className="cover" src={b.imageUrl} alt="" />}
       </a>
       <div className="allThreeBooks">
         <a href={b.bookUrl} target="_blank">
