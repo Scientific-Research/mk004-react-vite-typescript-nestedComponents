@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { books } from './dev/books';
+import books from './data/books.json';
 
 function App() {
   return (
