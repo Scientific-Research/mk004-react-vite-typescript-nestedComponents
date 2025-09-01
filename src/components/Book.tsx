@@ -25,6 +25,7 @@ export const Book = ({ book: b, toggleImages }: Iprops) => {
           <span className="author">Author:</span> {b.author}
         </p>
         <p className="isLiked">{b.isLiked ? 'LIKED' : 'Not Liked'}</p>
+        <button className="btnToggleLike">toggle like</button>
       </div>
     </div>
   );

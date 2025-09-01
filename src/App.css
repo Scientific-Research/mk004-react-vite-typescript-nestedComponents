@@ -70,4 +70,13 @@ body {
     margin-bottom: 1rem;
     padding: 0.5rem;
   }
+
+  .btnToggleLike {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .isLiked {
+    margin-top: 0.5rem;
+  }
 }
