@@ -11,11 +11,17 @@ export interface Iprops {
 // export const Books = ({ books }: BooksProps) => { OR
 // export const Books = ({ books, bookNumber }: Iprops) => {
 export const Books = ({ books }: Iprops) => {
-  const [toggleImages, setToggleImages] = useState(false);
+  const [toggleImages, setToggleImages] = useState(true);
 
   const handleToggleImages = () => {
     console.log('first');
-    setToggleImages(true);
+    // setToggleImages(true);
+
+    if (toggleImages === false) {
+      setToggleImages(true);
+    } else {
+      setToggleImages(false);
+    }
   };
 
   return (
