@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import rawBooks from './data/books.json';
-import { Books } from './components/books';
+import { Books } from './components/Books';
 import { IBook } from './interfaces';
 
 // const bookNumber = 837465;
